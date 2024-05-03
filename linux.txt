@@ -9,6 +9,7 @@ terminal file commands:
         ex. ls -ltrh     <- shows detailed list  information about a folder
             ls -ltr      <- same 
             ls -l        <- same
+    - tree - show tree like directory structure (needs to be installed with sudo apt install tree)
     - clear - clears the terminal
     - id - identity of the current user
     - uname - info about OS - uname -a   <- detailed description of OS
@@ -28,3 +29,28 @@ terminal file commands:
     - apt - install software manager for ubuntu
         ex. sudo apt install git or apt install git
     - yum - install software for redhat /fedora
+    - touch - touch a file - creates a file
+      ex. touch myfile.txt
+    - cat - display content of a file:
+        ex. cat > myfile.txt            <- using redirection , it creates the file and we can write in it
+                line1 text
+                line2 text        <- press ctrl-D to exit editing mode        
+        ex. cat myfile.txt    <- displays content of myfile
+
+    - mkdir - make a directory
+    - chmod - change mod of a file or directory
+    - chown - change ownership of file/directory
+    - ln - link to another file /directory
+    - mv - move a file/directory
+    - cp - copy a file or directory
+    - rm - remove a file or directory
+    - wc -l - wordcount
+    - vi/vim - view a file
+    - nano - view a file
+    - head - head of a file
+    - tail - tail of a file
+    - more - disply file
+    - less - display file
+    - find - find files  or directorys
+    - grep - display lines with a kw, in a file
+    - pipe - output of one cmd as input to next
