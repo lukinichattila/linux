@@ -1,0 +1,5 @@
+terminal file commands:
+================================================
+    - pwd - print working directory (prints the directory where we are in)
+    - cd - change directory: cd .. goes up, cd /mydir
+    - ls - list content of directory
