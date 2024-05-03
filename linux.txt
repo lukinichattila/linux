@@ -1,5 +1,30 @@
+Every file that starts with . is a hidden file in linux
+a command that starts with sudo means super user do
+
 terminal file commands:
 ================================================
     - pwd - print working directory (prints the directory where we are in)
     - cd - change directory: cd .. goes up, cd /mydir
     - ls - list content of directory
+        ex. ls -ltrh     <- shows detailed list  information about a folder
+            ls -ltr      <- same 
+            ls -l        <- same
+    - clear - clears the terminal
+    - id - identity of the current user
+    - uname - info about OS - uname -a   <- detailed description of OS
+    - hostname - hostname - name of the computer that we gave when installed ubutu
+    - uptime - how long the system is up
+    - date - date and time
+    - watch - repeat the command every 2 seconds
+      ex. watch date                  <- every 2 seconds runs date command
+          watch -n 5 date             <- runs date every 5 seconds
+    - echo - prints the message - echo hello! <- prints hello!
+    - df - displays all the file systems: 
+        ex. df -h     - for help: df --help
+    - du - disk usage 
+        ex. du -sh    <- size of current directory
+    - man - manual of a command 
+        ex. man df
+    - apt - install software manager for ubuntu
+        ex. sudo apt install git or apt install git
+    - yum - install software for redhat /fedora
