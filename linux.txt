@@ -6,9 +6,11 @@ terminal file commands:
     - pwd - print working directory (prints the directory where we are in)
     - cd - change directory: cd .. goes up, cd /mydir
     - ls - list content of directory
-        ex. ls -ltrh     <- shows detailed list  information about a folder
-            ls -ltr      <- same 
-            ls -l        <- same
+        ex. ls -l    <- shows detailed list  information about a folder
+            if line starts with a d then directory, if it starts with - then it is a file
+            drwxr-xr-x  2 minimanic minimanic 4096 May  3 00:45 Desktop      <- the user who the file belongs is minimanic, the members that are part of the minimanic group have read and execute rights, 
+                                                                                the other groups are read and execute
+
     - tree - show tree like directory structure (needs to be installed with sudo apt install tree)
     - clear - clears the terminal
     - id - identity of the current user
@@ -31,15 +33,24 @@ terminal file commands:
     - yum - install software for redhat /fedora
     - touch - touch a file - creates a file
       ex. touch myfile.txt
-    - cat - display content of a file:
-        ex. cat > myfile.txt            <- using redirection , it creates the file and we can write in it
+    - cat - display content of a file/create and edit a file:
+        ex. cat > myfile.txt            <- using redirection , it creates the file and we can write in it(owerwrites if already is something in it)
                 line1 text
                 line2 text        <- press ctrl-D to exit editing mode        
         ex. cat myfile.txt    <- displays content of myfile
+        ex. cat >> myfile.txt      <- opens the file for appending text, it will put the text at the end of file
 
     - mkdir - make a directory
+        ex. mkdir Dir1 Dir2 Dir3     <- creates 3 directory in the current working directory
     - chmod - change mod of a file or directory
+        - file permissions: r - read, w - write, x - execute assigned to user (u), group(g) , other(o) : owner rwx, Group rwx, Other Users rwx
+            ex. myText.txt   rw- r-x r--   (Owner read/write, Group members read and execute, Other users read)   -- means no rights
+        ex. chmod uo+rw myText.txt     <- sets the owner and other users to read/write access
+            chmod go-x myText.txt      <- sets the group and other users  to not allowed to execute 
+        - also we can set the accesses with numbers 1 = execute, 2 = write, 4 = read .to asign the number we calculate the acceses(sum of them) : rwx = 7, rx = 5, rw = 6
+            ex. chmod 756 myfile.txt           <- user = 7 = rwx, group = 5 = read and execute, other = 6 = read and write
     - chown - change ownership of file/directory
+
     - ln - link to another file /directory
     - mv - move a file/directory
     - cp - copy a file or directory
