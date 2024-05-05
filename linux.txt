@@ -31,8 +31,10 @@ terminal file commands:
     - apt - install software manager for ubuntu
         ex. sudo apt install git or apt install git
     - yum - install software for redhat /fedora
+
     - touch - touch a file - creates a file
       ex. touch myfile.txt
+
     - cat - display content of a file/create and edit a file:
         ex. cat > myfile.txt            <- using redirection , it creates the file and we can write in it(owerwrites if already is something in it)
                 line1 text
@@ -42,22 +44,40 @@ terminal file commands:
 
     - mkdir - make a directory
         ex. mkdir Dir1 Dir2 Dir3     <- creates 3 directory in the current working directory
+
     - chmod - change mod of a file or directory
         - file permissions: r - read, w - write, x - execute assigned to user (u), group(g) , other(o) : owner rwx, Group rwx, Other Users rwx
             ex. myText.txt   rw- r-x r--   (Owner read/write, Group members read and execute, Other users read)   -- means no rights
         ex. chmod uo+rw myText.txt     <- sets the owner and other users to read/write access
             chmod go-x myText.txt      <- sets the group and other users  to not allowed to execute 
-        - also we can set the accesses with numbers 1 = execute, 2 = write, 4 = read .to asign the number we calculate the acceses(sum of them) : rwx = 7, rx = 5, rw = 6
+        - also we can set the accesses with numbers 1 = execute, 2 = write, 4 = read .to asign the number we calculate the acceses(sum of them) : rwx = 7, rx = 5, rw = 6(1,2,4 are the bytes 1,2,3)
             ex. chmod 756 myfile.txt           <- user = 7 = rwx, group = 5 = read and execute, other = 6 = read and write
     - chown - change ownership of file/directory
 
     - ln - link to another file /directory
+        ex. ln -s 
     - mv - move a file/directory
+        ex. mv myfile.txt mysecondfile.txt      <- renames the myfile.txt to mysecondfile.txt 
+
     - cp - copy a file or directory
+        ex. cp myfile.txt mysecondfile.txt      <- creates another file with the same content as the first filename
+        - if we want to copy the subdirectorys, we need the -r (recursive) option specified
+        ex. cp -r myfolder myfolder2
+
     - rm - remove a file or directory
-    - wc -l - wordcount
-    - vi/vim - view a file
-    - nano - view a file
+        ex. rm myfile.txt    <-0 removes the myfile file
+        - if we want to delete subdirectorys of the directory then we use the -r flag:
+        ex. rm -r myfolder
+    - wc -l - wordcount - counts the lines, words in a file
+        ex. wc -l myfile.txt                   <- number of lines in the file
+
+    - vi/vim - notepad of linux
+        - press "i" insert mode, can be entered new lines of text
+        - to get back to command mode press "esc"
+        - to exit and save wq! enter
+    - nano - terminal based file editor !!!!!
+        ex. nano myfile.txt
+        exit with ctrl+xr
     - head - head of a file
     - tail - tail of a file
     - more - disply file
